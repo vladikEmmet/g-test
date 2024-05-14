@@ -1,0 +1,45 @@
+.container {
+  width: 700px;
+  height: 350px;
+  padding: 40px 60px;
+  background: rgba(154, 228, 135, 0.8);
+  border-radius: 10px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.answers {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  button {
+    height: 60px;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    position: relative;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+      color: rgb(154, 228, 135);
+
+      &::before {
+        content: '●';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: rgb(154, 228, 135);
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

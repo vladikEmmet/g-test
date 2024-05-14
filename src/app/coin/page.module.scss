@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.coin {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  /* Общие стили для монеты */
+}
+
+.side-a {
+  background-color: #bb0000;
+  color: white;
+  text-align: center;
+}
+.side-b {
+  background-color: #3e3e3e;
+  color: white;
+  text-align: center;
+}
+.side-a {
+  z-index: 100;
+}
+.side-b {
+  -webkit-transform: rotateY(-180deg);
+}
+
+.heads, .tails {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.heads {
+  transform: rotateY(0deg);
+}
+
+.tails {
+  transform: rotateY(180deg);
+}
+
+.side-a, .side-b {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  /* Стили для сторон монеты */
+}
+
+.side-b {
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background: rgba(154, 228, 135, 0.8);
+}
