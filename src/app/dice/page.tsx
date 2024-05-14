@@ -14,7 +14,7 @@ import cn from "clsx";
 export default function DicePage() {
     const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6];
     const [image, setImage] = React.useState(diceImages[0]);
-    const name = localStorage.getItem('name');
+    const name = typeof window !== "undefined" ? localStorage.getItem("name") : null;
 
     const rollDice = () => {
         let randomNum;
