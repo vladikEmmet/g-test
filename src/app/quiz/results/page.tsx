@@ -2,7 +2,7 @@
 import styles from "./page.module.scss";
 
 export default function QuizResultsPage() {
-    const name = localStorage.getItem('name');
+    const name = typeof window !== "undefined" ? localStorage.getItem("name") : null;
 
     return (
         <div className={styles.container}>

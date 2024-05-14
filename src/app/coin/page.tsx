@@ -6,7 +6,7 @@ import "./page.module.scss"; // Убедитесь, что импортируе�
 const App = () => {
     const [result, setResult] = useState("");
     const [animate, setAnimate] = useState(false);
-    const name = localStorage.getItem("name");
+    const name = typeof window !== "undefined" ? localStorage.getItem("name") : null;
 
     const coinToss = useCallback(() => {
         setAnimate(false); // Сначала выключаем анимацию
